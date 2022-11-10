@@ -60,7 +60,7 @@ const Forums: React.FC<IForums> = ({ updateListItem, deleteForum }) => {
         <>
             <div className={styles.headerContainer}>
                 <div className={`ms-Grid-row ${styles.header}`}>
-                    <div className="ms-Grid-col ms-sm5">{strings.Name}</div>
+                    <div className="ms-Grid-col ms-sm5">{strings.Name}!!!!</div>
                     <div className="ms-Grid-col ms-sm2">{strings.TopicsPosts}</div>
                     <div className="ms-Grid-col ms-sm4">{strings.LastPost}</div>
                     <div className="ms-Grid-col ms-sm1">&nbsp;</div>
