@@ -46,6 +46,6 @@ describe('Enzyme basics', () => {
         const text = reactComponent.find(cssSelector).text();
 
         // Assert  
-        expect(text).toBe("Forums ->MyForum ->MyTopic");
+        expect(text).toBe("Forums ->MyForum ->MyTopic!!");
     });
 });  
