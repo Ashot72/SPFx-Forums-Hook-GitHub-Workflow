@@ -1,0 +1,49 @@
+name: Shared package generator
+on: 
+  workflow_call:
+    inputs:
+      should-test:
+        description: Should test the package?
+        required: true
+        type: boolean      
+jobs:
+  generate-package:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Check-out repository, get the code.
+        uses: actions/checkout@v3
+
+      - name: Set up node version - 10.16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 10.16.x
+
+      - name: Load & cache dependencies
+        id: cache-deps
+        uses: ./.github/actions/cached-deps
+        with:
+          caching: 'true'
+
+      - name: Cache information
+        run: echo "Cache used? ${{ steps.cache-deps.outputs.used-cache }}"
+
+      - name: Unit testing
+        if: ${{ inputs.should-test }}       
+        run: npm run test
+      
+      - name: Gulp clean
+        run: npm run clean
+
+      - name: Gulp build
+        run: npm run build 
+
+      - name: Gulp bundle and package solution
+        run: |
+          npm run bundle
+          npm run package
+
+      - name: Upload Package
+        uses: actions/upload-artifact@v3
+        with:
+          name: package
+          path: ${{ github.workspace }}/sharepoint/solution/react-forums-hooks.sppkg

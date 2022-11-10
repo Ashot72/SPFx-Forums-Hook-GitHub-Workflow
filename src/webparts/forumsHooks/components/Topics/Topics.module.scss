@@ -1,0 +1,53 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.error {
+  color:red;
+}
+
+.dateContainer {
+   display: flex;
+   margin-top: 4px !important;
+
+   .dateField {
+      margin-top: 6px;
+      margin-right: 4px;
+      margin-left: 4px;
+   }
+}
+
+.header {
+    font-weight: 500 !important;
+    @include ms-font-l;
+}
+
+.topics {
+    .icon {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+        cursor: pointer;
+        font-size: 19px;
+        color: '[theme: themePrimary, default: #0078d7]';
+    }
+
+    .row {
+      margin: 0 !important;
+      padding: 5px 0;
+    }
+
+    
+  .headerContainer {
+    background-color: '[theme: themeDark, default: #0156b0]';
+    padding: 5px 0;
+
+    .header {
+        margin: 0 0 0 5px !important;
+        @include ms-fontColor-white;
+        @include ms-font-m;
+        font-weight: $ms-font-weight-semibold;
+        height: 30px;
+        align-items: center;
+        display: flex;    
+      }
+    }
+}

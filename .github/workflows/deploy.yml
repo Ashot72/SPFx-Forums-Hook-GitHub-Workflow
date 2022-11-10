@@ -1,0 +1,36 @@
+name: Deploy app to tenant
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+    types:
+      - closed
+jobs:
+  generate-package:
+    uses: ./.github/workflows/shared.yml
+    with:
+      should-test: false 
+
+  deploy-to-tenant:
+    needs: generate-package
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Download the package
+        uses: actions/download-artifact@v3
+        with:
+          name: package
+
+      - name: Login to tenant
+        uses: pnp/action-cli-login@v2.0.0
+        with:
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }} 
+
+      - name: Deploy app to tenant
+        uses: pnp/action-cli-deploy@v2.0.0
+        with:
+          APP_FILE_PATH: react-forums-hooks.sppkg
+          SCOPE: tenant
+          SKIP_FEATURE_DEPLOYMENT: true
+          OVERWRITE: true

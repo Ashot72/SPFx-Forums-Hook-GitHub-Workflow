@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "forums-hooks-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/forumsHooks/ForumsHooksWebPart.js",
+          "manifest": "./src/webparts/forumsHooks/ForumsHooksWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ForumsHooksWebPartStrings": "lib/webparts/forumsHooks/loc/{locale}.js"
+  }
+}

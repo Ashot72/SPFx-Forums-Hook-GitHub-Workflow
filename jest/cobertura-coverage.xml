@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="0" lines-covered="0" line-rate="NaN" branches-valid="0" branches-covered="0" branch-rate="NaN" timestamp="1668071906229" complexity="0" version="0.1">
+  <sources>
+    <source>D:\GITHUBACTIONS\forum\SPFx-Forums-Hook</source>
+  </sources>
+  <packages>
+  </packages>
+</coverage>

@@ -1,0 +1,13 @@
+name: Build & generate package
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  generate-package:
+    uses: ./.github/workflows/shared.yml
+    with:
+      should-test: true
+
+   
+ 
