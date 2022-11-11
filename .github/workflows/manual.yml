@@ -1,4 +1,4 @@
-name: Testing Checkout
+name: Testing Jobs
 on:
   workflow_dispatch:   
 jobs:
@@ -11,3 +11,9 @@ jobs:
       uses: actions/checkout@v3
     - name: After checkout
       run: ls -l
+  release:
+   runs-on: ubuntu-latest
+   steps: 
+    - name: Released
+      run: echo "It is rleased!"
+   
