@@ -24,9 +24,6 @@
 a:link, span.MsoHyperlink
 	{color:#0563C1;
 	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:#954F72;
-	text-decoration:underline;}
 .MsoChpDefault
 	{font-family:"Calibri",sans-serif;}
 .MsoPapDefault
@@ -46,1347 +43,1286 @@ div.WordSection1
 
 <div class=WordSection1>
 
+<p class=MsoNormal align=center style='text-align:center'><a
+name="_Hlk119327532"></a><span style='font-size:20.0pt;line-height:107%;
+color:black'>SPFx Forums Hook GitHub Workflow</span></p>
+
 <p class=MsoNormal align=center style='text-align:center'><span
-style='font-size:18.0pt;line-height:107%'>React SharePoint (SPFx) Forums Hooks</span></p>
+style='font-size:20.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Video link: <a href="https://youtu.be/TKfQWAVdbOc"
-target="_blank">https://youtu.be/TKfQWAVdbOc</a></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Video:
+</span><span lang=ES style='font-size:14.0pt;line-height:107%;color:black'><a
+href="https://youtu.be/QkizlUCVYSY" target="_blank"><span lang=EN-US>https://youtu.be/QkizlUCVYSY</span></a></span></p>
 
-<p class=MsoNormal>Git Repository: <a
-href="https://github.com/Ashot72/SPFx-Forums-Hook" target="_blank">https://github.com/Ashot72/SPFx-Forums-Hook</a><a
-href="https://github.com/ashotik/SPFx-forums-hooks" target="_blank"></a></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>GitHub
+Repo: </span><span lang=ES style='font-size:14.0pt;line-height:107%;color:black'><a
+href="https://github.com/Ashot72/SPFx-Forums-Hook-GitHub-Workflow"
+target="_blank"><span lang=EN-US>https://github.com/Ashot72/SPFx-Forums-Hook-GitHub-Workflow</span></a></span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Hooks are a new addition in React 16.8. They let you use
-state and other React features without writing a class. As a result, we do not
-need to learn</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>GitHub
+Workflows (Actions) is a continues integration and continues delivery (CI/CD)
+platform that allows you to automate your build, test and deployment pipeline.</span></p>
 
-<p class=MsoNormal>and understand specialized React features anymore; we can
-simply use our existing JavaScript knowledge in order to use Hooks. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+are going to build our own GitHub action workflows for SPFx Forums Hook webpart
+that we have already built </span><a
+href="https://github.com/Ashot72/SPFx-Forums-Hook" target="_blank"><span
+style='font-size:14.0pt;line-height:107%'>https://github.com/Ashot72/SPFx-Forums-Hook</span></a></p>
 
-<p class=MsoNormal>React provides a few built-in-Hooks.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+will test, build and generate Forums Hooks package which we can upload it
+manually, but we are going to automate even the package deployment to App Catalog.</span></p>
 
-<p class=MsoNormal>Let<span style='color:black'>'</span>s go through the
-built-in hooks. We will go deeper when we explore our basic forums app.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><i>useState </i>Hook</p>
-
-<p class=MsoNormal><img border=0 width=700 height=112 id="Picture 1"
+<p class=MsoNormal><img border=0 width=881 height=81 id="Picture 4"
 src="index_files/image001.png"></p>
 
-<p class=MsoNormal>Figure 1</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+1</span></p>
 
-<p class=MsoNormal><i>useState</i> Hook returns a stateful value (<i>state</i>)
-and a setter function (<i>setState</i>) in order to update the value.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>There
+are basically three main blocks to understand when working with GitHub Actions.
+That would be <i>Workflows</i>, <i>Jobs</i> and <i>Steps</i>. We have a code
+repository on</span></p>
 
-<p class=MsoNormal>The <i>useState </i>Hook is used to deal with <i>state</i>
-in React. The <i>useState</i> Hook replaces <i>this.state</i> and <i>this.setState()</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>GitHub
+and that is important because this is a GitHub feature and it is related to repositories
+on GitHub. We typically store some code in there. </span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><i>useEffect </i>Hook</p>
-
-<p class=MsoNormal><img border=0 width=651 height=115 id="Picture 2"
+<p class=MsoNormal><img border=0 width=921 height=511 id="Picture 5"
 src="index_files/image002.png"></p>
 
-<p class=MsoNormal>Figure 2</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+2</span></p>
 
-<p class=MsoNormal>This Hook works similar to adding a function on <i>componentDidMount
-</i>and <i>componentDidUpdate</i>. Effect Hook allows for returning a</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>The
+important thing is that workflows are attached to those GitHub repositories.
+You can add workflows to GitHub repositories and you can add as many workflows
+as you </span></p>
 
-<p class=MsoNormal>cleanup function from it, which works similarly to adding a
-function to <i>componentWillUnmount</i>. The <i>useEffect </i>Hook is used to
-deal with timers, </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>want
+to a given repository. Such a workflow includes one or more jobs. That is the
+next important block, <i>Jobs</i><b>.  </b>So, we have workflows that belong to
+repositories and then it </span></p>
 
-<p class=MsoNormal>subscriptions, requests, and so on. The <i>useEffect </i>Hook
-replaces the <i>componentDidMount</i>, <i>componentDidUpdate</i>, and <i>componentWillUnmount</i>
-methods.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>those
+workflows we have jobs. Those jobs then contain one or more <i>steps</i> that
+will be executed in the order in which they are specified. These steps define
+the</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>actual
+things that will be done. For example, download the code in the first step,
+install the dependences in the second step, and run automates test in the</span></p>
 
-<p class=MsoNormal><i>useContext </i>Hook</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>third
+step. That is what we can do with GitHub Actions and with such a workflow that
+contains a job with the appropriate steps. You can have as many</span></p>
 
-<p class=MsoNormal><img border=0 width=582 height=109 id="Picture 3"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>workflows
+as you want and as many jobs per workflow as you want and as many steps in a
+job as you want.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=881 height=421 id="Picture 6"
 src="index_files/image003.png"></p>
 
-<p class=MsoNormal>Figure 3</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+3</span></p>
 
-<p class=MsoNormal>This Hook accepts a context object and returns the current
-context value. The <i>useContext </i>Hook is used to deal with context in
-React.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>With
+GitHub actions we assign so called triggers or events to our workflows. These
+events define when a given workflow will be executed. For example,</span></p>
 
-<p class=MsoNormal>The <i>useContext</i> Hook replaces context consumers.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>you
+could add an event that requires manual activation of a workflow, but you could
+also add an event that triggers and executes a workflow</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>whenever
+a new commit is pushed to a certain branch.</span></p>
 
-<p class=MsoNormal><i>useRef </i>Hook</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Every
+job defines a so-called <i>runner </i>which is simply the execution
+environment, the machine and operating system that will be used for executing</span></p>
 
-<p class=MsoNormal><img border=0 width=590 height=127 id="Picture 4"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>the
+steps. With GitHub actions, these runners can either be runners that are
+predefined by GitHub. They offer runners for Linux, Mac OS, and Windows</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>but
+we can also configure our own runners. Jobs as we said define some steps that
+will be executed in the runner environment, on the machine</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>we
+specified. If we have multiple jobs, they run in parallel by default, but you
+can configure them to run in sequential order, so one job after another.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>You
+can also set up conditional jobs which will not always run, but which instead
+need a certain condition to be met.</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%;
+color:black'>Steps</span></i><span style='font-size:14.0pt;line-height:107%;
+color:black'> belong to jobs, and a job can have one or more steps. A step is
+either a shell script a command in the command line that should be executed,</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>or
+an action, which is another important building block. Actions in the context of
+GitHub action are predefined scripts that perform a certain task</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+can build our own actions if we need to or use third-party actions, but for
+simple tasks, we can also execute a command in the command line.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Steps
+are executed in order, they do not run in parallel, but instead step after step
+and they can also be conditional.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=834 height=573 id="Picture 7"
 src="index_files/image004.png"></p>
 
-<p class=MsoNormal>Figure 4</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+4</span></p>
 
-<p class=MsoNormal>This Hook returns a mutable <i>ref</i> object, where the. <i>current
-</i>property is initialized to the passed argument (<i>initialValue</i>).</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Actions
+in the repository are stored in a <i>.github</i>/<i>workflows</i> subfolder having
+yml or yaml extension.</span></p>
 
-<p class=MsoNormal>The <i>useRef </i>Hook is used to deal with references to
-elements and components on React. We can use set a reference by passing</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>This
+is where we should store our GitHub workflows so that GitHub is able to detect
+them.</span></p>
 
-<p class=MsoNormal>the <i>ref </i>prop to an element or a component, as
-follows: &lt;Component ref={refContainer} /&gt;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><i>useReducer </i>Hook</p>
-
-<p class=MsoNormal><img border=0 width=671 height=126 id="Picture 5"
+<p class=MsoNormal><img border=0 width=834 height=573 id="Picture 8"
 src="index_files/image005.png"></p>
 
-<p class=MsoNormal>Figure 5</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+5</span></p>
 
-<p class=MsoNormal>This Hook is an alternative to <i>useState, </i>and works
-similarly to the Redux library. The <i>useReducer </i>Hook Is used to deal with
-complex state logic.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+give an action a <i>name</i>, by specifying our workflow name. After it we
+should define when the workflow should be executed.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+do it by adding <i>on</i> key. The on key is just like name and after it we
+define the event or the events that should trigger the workflow to run.</span></p>
 
-<p class=MsoNormal><i>useMemo </i>Hook</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>GitHub
+actions define many events which we can listen. Here we defined <i>push </i>event
+and the event runs when you push a commit or tag.</span></p>
 
-<p class=MsoNormal><img border=0 width=762 height=127 id="Picture 6"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+also specified <i>develop</i> branch and our workflow will run when we push to <i>develop</i>
+branch.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1061 height=411 id="Picture 11"
 src="index_files/image006.png"></p>
 
-<p class=MsoNormal>Figure 6</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+6</span></p>
 
-<p class=MsoNormal>Memorization is an optimization technique where the result
-of a function call is cached, and is then returned when the same input</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Let</span><span
+style='color:black'>'</span></span><span style='font-size:14.0pt;line-height:
+107%;color:black'>s take a closer look at workflow triggers and events and to
+be clear that is the same thing.</span></p>
 
-<p class=MsoNormal>occurs again. The <i>useMemo </i>Hook allows us to compute a
-value and memorize it. The <i>useMemo </i>Hook is useful for optimization when</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>GitHub
+actions actually offers tons of events you can listen to. Most of them are
+repository related and there you got events like a <i>push </i></span></p>
 
-<p class=MsoNormal>we want to avoid re-executing expensive operations.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>happening
+or a <i>pull_request</i> being opened or maybe a new branch was created or a
+repository was forked or an issue was opened or detected.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>There
+also are some other events. <i>workflow_dispatch</i> which allow us to manually
+trigger workflows. We also have <i>repository_dispatch </i></span></p>
 
-<p class=MsoNormal><i>useCallback </i>Hook</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>which
+we allow us to send REST API request to a specific GitHub API to trigger a
+workflow. We can schedule a workflow by running every day at</span></p>
 
-<p class=MsoNormal><img border=0 width=614 height=170 id="Picture 7"
-src="index_files/image007.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>8:00
+AM for example. We also allow a workflow to be called by other workflows as
+something we will explore in our project.</span></p>
 
-<p class=MsoNormal>Figure 7</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>This Hook allows us to pass an inline function, and an array
-of dependencies, and will return a memorized version of the callback function.</p>
+<p class=MsoNormal><img border=0 width=1130 height=599 id="Picture 9"
+src="index_files/image007.jpg"></p>
 
-<p class=MsoNormal>The <i>useCallback </i>Hook is useful when passing callbacks
-to optimized child components. It works similarly to the <i>useMemo</i> Hook,
-but for</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+7</span></p>
 
-<p class=MsoNormal>callback functions.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>On
+</span><a
+href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows"
+target="_blank"><span style='font-size:14.0pt;line-height:107%'>https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows</span></a><span
+style='font-size:14.0pt;line-height:107%;color:black'> page you see all the
+events that can trigger a workflow and how exactly these events are triggered.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=939 height=650 id="Picture 9"
+<p class=MsoNormal><img border=0 width=1241 height=755 id="Picture 10"
 src="index_files/image008.png"></p>
 
-<p class=MsoNormal>Figure 8</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+8</span></p>
 
-<p class=MsoNormal>React Router DOM allows us to handle <i>routes</i> in a web
-app. In our forum we use <i>HashRouter</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Here
+in the example of the <i>pull_request</i> event it shows which variations of
+that event can trigger a workflow. For pull_request case,</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>the
+workflow should be triggered when a new pull_request is <i>opened</i> or maybe
+when it is <i>closed</i> or any other variations.</span></p>
 
-<p class=MsoNormal><img border=0 width=893 height=654 id="Picture 11"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=661 height=331 id="Picture 13"
 src="index_files/image009.png"></p>
 
-<p class=MsoNormal>Figure 9</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+9</span></p>
 
-<p class=MsoNormal>On posts page, after the hash (#) you see <i>/posts/3/4</i> params.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Actions
+are another key building block or component of GitHub Actions. Action is simply
+a custom or third-party application</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>that
+performs a typically complex, frequently repeated task. For example, fetching
+the code from a GitHub repository, and</span></p>
 
-<p class=MsoNormal><img border=0 width=943 height=362 id="Picture 12"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>downloading
+it onto a runner machine. The alternative to such action is a command that</span><span
+style='color:black'>'</span></span><span style='font-size:14.0pt;line-height:
+107%;color:black'>s defined with help of the “run”</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>keyword
+in your YAML file.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=777 height=825 id="Picture 14"
 src="index_files/image010.png"></p>
 
-<p class=MsoNormal>Figure 10</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>The path matches <i>/posts/:fid/:tid </i>where <i>fid</i> is
-the <i>forum Id</i> and <i>tid</i> is <i>topic Id</i> and loads <i>Posts</i>
-component.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+10</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+have used <i>run</i> command in our workflow. With this “run” command we simply
+execute typically simple shell commands</span></p>
 
-<p class=MsoNormal><img border=0 width=838 height=473 id="Picture 15"
-src="index_files/image011.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>on
+that runner machine and these commands are written down by us. Actions on the
+other hand, are predefined applications,</span></p>
 
-<p class=MsoNormal>Figure 11</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>which
+actually also can be distributed through a marketplace because you can build
+you own actions. You can also use official </span></p>
 
-<p class=MsoNormal><i>React Suspense </i>allows us to let components wait
-before rendering. At the moment, React Suspense only allows us to dynamically
-load components</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>or
+community actions.</span></p>
 
-<p class=MsoNormal>with <i>React.lazy</i>. In the future, Suspense will support
-other cases, such as data fetching.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><i>React.lazy </i>is another form of performance optimization.
-It lets us load a component dynamically in order to reduce the bundle size.</p>
+<p class=MsoNormal><img border=0 width=1044 height=551 id="Picture 15"
+src="index_files/image011.jpg"></p>
 
-<p class=MsoNormal>Sometimes we want to avoid loading all of the components
-during the initial render, and only request certain components when they are
-needed.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+11</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>This
+is the official Checkout action which is created and maintained be the GitHub
+team. Marketplace actions do not cost money.</span></p>
 
-<p class=MsoNormal><img border=0 width=996 height=526 id="Picture 16"
-src="index_files/image012.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 12</p>
+<p class=MsoNormal><img border=0 width=668 height=627 id="Picture 16"
+src="index_files/image012.png"></p>
 
-<p class=MsoNormal>When you load the Forums (first) page, you will see waiting
-icon and <i>Loading… </i></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+12</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>So
+here in our code we use <i>checkout</i> action. And with that, this is all we
+have to do for this action.</span></p>
 
-<p class=MsoNormal><img border=0 width=871 height=522 id="Picture 17"
-src="index_files/image013.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 13</p>
+<p class=MsoNormal><img border=0 width=1049 height=571 id="Picture 17"
+src="index_files/image013.jpg"></p>
 
-<p class=MsoNormal>While <i>Forums</i> component is loading <i>React.Suspense</i>
-will show the loading icon and loading message we specified in <i>fallback</i>
-property.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+13</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>To
+see it in action I created a workflow where we run Linux <i>ls</i> (list files
+and directories) shell command before and after the checkout. </span></p>
 
-<p class=MsoNormal><img border=0 width=939 height=339 id="Picture 18"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>The
+event is <i>workflow_dispatch </i>to allow us to manually trigger workflows.
+You see we run it on <i>Ubuntu runner</i> which is the modern, </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>open-source
+operating system on Linux.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1084 height=551 id="Picture 18"
 src="index_files/image014.jpg"></p>
 
-<p class=MsoNormal>Figure 14</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+14</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Here
+we run the workflow manually.</span></p>
 
-<p class=MsoNormal>In the network tab you will notice JavaScript chunks after
-forums (first) page has been loaded. These chunks load only <i>forums</i> code
-not <i>topics</i> or <i>posts</i></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>as we defined it via <i>const Forums = React.lazy(() =&gt;
-import(</i><span style='color:black'>'</span><i>./Forums/ForumsView</i><span
-style='color:black'>'</span><i>)) </i>(Figure 11).</p>
+<p class=MsoNormal><img border=0 width=1122 height=493 id="Picture 19"
+src="index_files/image015.jpg"></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+15</span></p>
 
-<p class=MsoNormal><img border=0 width=884 height=596 id="Picture 19"
-src="index_files/image015.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>It
+is running.</span></p>
 
-<p class=MsoNormal>Figure 15</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>When you navigate from <i>forums</i> page to <i>topics</i>
-one first time you will see <i>React Suspense</i> in action and we are loading
-topics chunks this time.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1064 height=498 id="Picture 20"
+<p class=MsoNormal><img border=0 width=990 height=765 id="Picture 20"
 src="index_files/image016.png"></p>
 
-<p class=MsoNormal>Figure 16</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+16</span></p>
 
-<p class=MsoNormal>The chunks are loaded. Once you navigate to <i>posts</i>
-page you will see posts chunks loaded in a similar way. If you navigate form <i>forums</i>
-page to</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>You
+can see that before the checkout nothing on our ubuntu machine but after the
+checkout the repository code has been loaded.</span></p>
 
-<p class=MsoNormal><i>topics</i> page or back to <i>forums</i> or <i>posts</i>
-page no chunks will be loaded as they have already been loaded.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=800 height=589 id="Picture 21"
+<p class=MsoNormal><img border=0 width=1000 height=755 id="Picture 21"
 src="index_files/image017.png"></p>
 
-<p class=MsoNormal>Figure 17</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+17</span></p>
 
-<p class=MsoNormal>We will talk about <i>AppStateProvider</i> and <i>WebPartContextProvder</i>
-a little bit later.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>This
+is our repository.</span></p>
 
-<p class=MsoNormal>React context (<i>useContext </i>Hook) provides a solution
-to passing down props over multiple levels of components, by allowing share
-values between components,</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>without having to explicitly pass them down via props. <i>React
-context </i>is perfect for sharing values across the whole application.</p>
-
-<p class=MsoNormal>We have used <i>React context </i>in many places in our app.
-I would like to show a <i>React context </i>case in the app which is easier to
-grasp.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1062 height=375 id="Picture 22"
+<p class=MsoNormal><img border=0 width=905 height=594 id="Picture 22"
 src="index_files/image018.jpg"></p>
 
-<p class=MsoNormal>Figure 18</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+18</span></p>
 
-<p class=MsoNormal>When we add a topic or update it, we specify an expiration
-date. In general, it would be much better to specify a calendar component instead
-of these 3 drop downs but I </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Here,
+we defined two jobs in the workflow.</span></p>
 
-<p class=MsoNormal>chose them on purpose to show how <i>React context </i>can
-be used.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1087 height=416 id="Picture 26"
+<p class=MsoNormal><img border=0 width=1117 height=528 id="Picture 24"
 src="index_files/image019.jpg"></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+19</span></p>
 
-<p class=MsoNormal>Figure 19</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>You
+see these two jobs are running in parallel and release job has already been
+executed. Then run simultaneously.</span></p>
 
-<p class=MsoNormal>In TopicForm.tsx component you can see that we have <i>DateFields</i>
-component which has <i>DayField</i>, <i>MonthField</i> and <i>YearField</i>
-components as children. When a <i>day</i>, <i>month</i> or <i>year</i> </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>is selected as an option (Figure 18) then <i>onChange</i>
-event is fired passing the selected date to <i>handleCustom</i> method. </p>
+<p class=MsoNormal><img border=0 width=988 height=569 id="Picture 25"
+src="index_files/image020.png"></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+20</span></p>
 
-<p class=MsoNormal><img border=0 width=1124 height=513 id="Picture 27"
-src="index_files/image020.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>The
+total time duration in this case 15 second which is not the sum of the
+individual durations. This proves that they run in parallel.</span></p>
 
-<p class=MsoNormal>Figure 20</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>In DateFields.tsx we import the context from react and
-specify our <i>const Context</i> with <i>date</i> object and <i>onChange</i>
-event. In <i>Context.Provider </i></p>
+<p class=MsoNormal><img border=0 width=731 height=785 id="Picture 26"
+src="index_files/image021.png"></p>
 
-<p class=MsoNormal>we pass <i>context</i> (<i>IDateFieldProp</i> interface) as
-a <i>value</i> and also children (<i>DayField</i>, <i>MonthField</i> and <i>YearField</i>
-are children of <i>DateFields </i>component).</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+21</span></p>
 
-<p class=MsoNormal>Every Context object comes with a Provider React component (<i>Context.Provider</i>)
-that allows consuming components to subscribe to context changes.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+our project for these <i>generate-package</i> and <i>deploy to tenant</i> jobs
+it makes sense to run them after each other</span></p>
 
-<p class=MsoNormal>The Provider component accepts a <i>value</i> prop to be
-passed to consuming components that are descendants of this Provider. One
-Provider can be</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>instead
+of in parallel. Because we probably only want to deploy to tenant if package
+has successfully been generated.</span></p>
 
-<p class=MsoNormal>connected to many consumers. All consumers that are
-descendants of a Provider will re-render whenever the Provider<span
-style='color:black'>'</span>s prop changes.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>If
+we got a failing package generation we do not want to deploy. To run jobs after
+each other we just have to add one simple</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>keyword
+to the job and that is the <i>needs</i> keyword. With <i>needs</i> we can point
+to the identifier of another job that must be finish</span></p>
 
-<p class=MsoNormal><img border=0 width=1108 height=506 id="Picture 28"
-src="index_files/image021.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>before
+this job. In this case I add <i>generate-package </i>to clarify that <i>deploy-to-tenant</i>
+job needs the <i>generate-package </i>job to have</span></p>
 
-<p class=MsoNormal>Figure 21</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>finished
+before the deployment. We could wrap <i>needs </i>in brackets to wait for
+multiple jobs to finish such as </span></p>
 
-<p class=MsoNormal>In <i>DayField component </i>which is a child of <i>DateFields
-</i>component we consume the <i>context</i> which provides us <i>date</i>
-object and <i>onChange</i> event.<i> </i>Note, we do not pass them as props </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>needs:
+[job1, job2, job3]</span></p>
 
-<p class=MsoNormal>we obtain them via the context. DayField component is the
-first dropdown in topic<span style='color:black'>'</span>s expiration date
-(Figure 18). When a day is selected in the first option then <i>onChange</i>
-event is fired </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>with the selected date and passed to <i>handleCustom </i>method
-(Figure 19).</p>
+<p class=MsoNormal><img border=0 width=1122 height=399 id="Picture 27"
+src="index_files/image022.png"></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+22</span></p>
 
-<p class=MsoNormal><img border=0 width=1154 height=511 id="Picture 29"
-src="index_files/image022.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Here
+we can see that they run after each other which is also reflected visually
+here. We see that deploy will only start</span></p>
 
-<p class=MsoNormal>Figure 22</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>after
+the package has been generated. Overall, this workflow will take longer because
+now the jobs do not run in parallel.</span></p>
 
-<p class=MsoNormal><i>MonthField</i> and <i>YearField</i> work similarly.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>I would like to show <i>useReducer </i>Hooks in action then
-after it we will explore the forums app from scratch. The <i>useReducer </i>Hook
-is an advanced version of the <i>useState</i> Hook. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Sometimes
+we have some certain actions that needs some metadata from the environment, for
+example we could work</span></p>
 
-<p class=MsoNormal>It accepts a <i>reducer</i> as the first argument, which is
-a function with two arguments: <i>state</i> and <i>action</i>. The <i>reducer </i>function
-then returns the updated state computed from the </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>with
+environment variables something we will explore later.</span></p>
 
-<p class=MsoNormal>current <i>state</i> and the <i>action</i>. If a reducer
-returns the same value as the previous state, React will not re-render
-components or trigger effects.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Let</span><span
+style='color:black'>'</span></span><span style='font-size:14.0pt;line-height:
+107%;color:black'>s create a simple workflow.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=887 height=155 id="Picture 30"
+<p class=MsoNormal><img border=0 width=660 height=440 id="Picture 29"
 src="index_files/image023.png"></p>
 
-<p class=MsoNormal>Figure 23</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+23</span></p>
 
-<p class=MsoNormal>We should use <i>useReducer </i>Hook instead of the <i>useState
-</i>Hook when dealing complex <i>state</i> changes. It is easier to deal with
-global <i>state </i></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+name it <i>Output Information</i>. We trigger this workflow manually with <i>workflow_dispatch</i>.
+We define one job naming it <i>info</i></span></p>
 
-<p class=MsoNormal>because we can simply pass down the <i>dispatch </i>function
-instead of multiple setter functions.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>This
+job runs on ubuntu-latest. We want to output some information that is
+automatically passed into these jobs and steps.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>This
+meta information is named <i>context</i>. GitHub actions creates some context
+data with various piece of information about</span></p>
 
-<p class=MsoNormal><img border=0 width=898 height=619 id="Picture 121"
-src="index_files/image024.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>the
+event trigger, runner and other things that can be accessed inside of steps. In
+the first step we output <i>GitHub context</i>,</span></p>
 
-<p class=MsoNormal>Figure 24</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>which
+is an object or a collection of data with some general information about the
+workflow and the event triggers.</span></p>
 
-<p class=MsoNormal>In PostView.tsx component we <i>import postsReducer. </i>In <i>useReducer</i>
-we pass <i>initialState</i> as an empty array [] (Initially no <i>posts</i>).
-Once we obtain <i>posts</i> from</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+are outputting data we are getting from GitHub. That is <i>github</i>
+identifier. To access the dynamic value in the command</span></p>
 
-<p class=MsoNormal>a SharePoint list we dispatch <span style='color:black'>'</span>LOAD_POSTS<span
-style='color:black'>'</span> action.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>we
+use special syntax ${{ }}.  In this case it is ${{ github }} key. To make it
+readable we wrap it in a function toJSON.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1049 height=487 id="Picture 32"
-src="index_files/image025.jpg"></p>
+<p class=MsoNormal><img border=0 width=964 height=640 id="Picture 28"
+src="index_files/image024.jpg"></p>
 
-<p class=MsoNormal>Figure 25</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+24</span></p>
 
-<p class=MsoNormal>This is <i>postReduser.ts</i>. When the action type is <span
-style='color:black'>'</span>LOAD_POSTS<span style='color:black'>'</span> we
-just append coming posts to the current ones.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>If
+we search for GitHub actions context  </span><a
+href="https://docs.github.com/en/actions/learn-github-actions/contexts"
+target="_blank"><span style='font-size:14.0pt;line-height:107%'>https://docs.github.com/en/actions/learn-github-actions/contexts</span></a><span
+style='font-size:14.0pt;line-height:107%;color:black'> we see github object and
+other contexts that we are going to use in our workflows.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1050 height=555 id="Picture 33"
-src="index_files/image026.jpg"></p>
+<p class=MsoNormal><img border=0 width=872 height=799 id="Picture 30"
+src="index_files/image025.png"></p>
 
-<p class=MsoNormal>Figure 26</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+25</span></p>
 
-<p class=MsoNormal>We navigate to <i>Posts</i> page and fetch <i>posts</i> data.
-Posts data are pushed to <i>state</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+see that these data here are all fetched from this GitHub object context. </span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1034 height=472 id="Picture 34"
-src="index_files/image027.jpg"></p>
+<p class=MsoNormal><img border=0 width=1258 height=507 id="Picture 31"
+src="index_files/image026.png"></p>
 
-<p class=MsoNormal>Figure 27</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+25</span></p>
 
-<p class=MsoNormal>After we click <i>Load More</i> button, we append new posts
-to the existing ones (Figure 25). Once we have posts in the state, we can use
-it in the app.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Before
+exploring the other features of GitHub actions, I would like do draw our
+workflow. We have two workflows. First one is <i>Build Workflow</i> (build.yml)</span></p>
 
-<p class=MsoNormal>You should notice that we imported postReducer in
-PostsView.tsx file and used it in that component. In other </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>running
+on <i>push</i> event. The other one is <i>Deploy Workflow </i>running on <i>pull_request</i>
+event. They use reusable workflow <i>shared.yml </i>which in its turn uses a</span></p>
 
-<p class=MsoNormal>words it is local to the component but there are cases when
-we want to use reducers globally throughout the app. Let<span style='color:
-black'>'</span>s find out how to do it.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>custom
+action to cache and install dependencies.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1099 height=518 id="Picture 36"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+GitHub Actions <i>Artifacts </i>allow you to share data between jobs in a
+workflow and store once that workflow has completed.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>An
+artifact is a file or collection of files produced during a workflow run. For example,
+you can use artifacts to save your build</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>and
+test output after a workflow run has ended.  Storing artifacts uses storage
+space on GitHub.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Artifacts
+are uploaded during a workflow run and you can view an artifact</span><span
+style='color:black'>'</span></span><span style='font-size:14.0pt;line-height:
+107%;color:black'>s name and size in the UI. When an artifact is</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>downloaded
+using GitHub UI, all files that were individually uploaded as part of the
+artifact get zipped together into a </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>single
+file.</span></p>
+
+<span style='font-size:14.0pt;line-height:107%;font-family:"Calibri",sans-serif;
+color:black'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1083 height=691 id="Picture 32"
+src="index_files/image027.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+27</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+our shared.yml file, in the reusable workflow you see that we generated our
+SPFx package in <i>Gulp bundle and package</i> <i>solution</i> step and
+uploaded it to </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>storage
+space. We name it <i>package </i>and also are specifying the path of the
+package in our runner. SPFx packages are generated in <i>sharepoint/solution </i>folder.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1147 height=714 id="Picture 33"
 src="index_files/image028.png"></p>
 
-<p class=MsoNormal>Figure 28</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+28</span></p>
 
-<p class=MsoNormal>In ForumsHooks.tsx file where we specified Routing the
-parent component is AppStateProvider.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>On
+the workflow page under the artifacts, you can see <i>package </i>That is the
+package we uploaded from the runner to storage space.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1097 height=514 id="Picture 37"
+<p class=MsoNormal><img border=0 width=641 height=612 id="Picture 34"
 src="index_files/image029.png"></p>
 
-<p class=MsoNormal>Figure 29</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+29</span></p>
 
-<p class=MsoNormal>If you closely look at AppContext.tsx file everything should
-be clear to you, I hope. We specify our context and pass a reducer as <i>value</i>
-and pass <i>children</i> <i>as </i>well. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+can download the package to our machine by clicking the package.</span></p>
 
-<p class=MsoNormal>Recall our DateFields component (Figure 19, Figure 20). We
-also specify <i>useContext</i> in this file to import.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1109 height=464 id="Picture 38"
+<p class=MsoNormal><img border=0 width=608 height=273 id="Picture 35"
 src="index_files/image030.png"></p>
 
-<p class=MsoNormal>Figure 30</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+30</span></p>
 
-<p class=MsoNormal>As AppStateProvider is the uppermost component and we pass
-children in our context then our reducer (<i>state</i> and <i>dispatch</i>) can
-be used throughout the app. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+have our SPFx package there. There can be more than one file inside the zip
+file but in our case, we just need the SPFx package only.</span></p>
 
-<p class=MsoNormal>We globally shared our reducer.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><img border=0 width=1198 height=362 id="Picture 36"
+src="index_files/image031.jpg"></p>
 
-<p class=MsoNormal><img border=0 width=1153 height=528 id="Picture 39"
-src="index_files/image031.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+31</span></p>
 
-<p class=MsoNormal>Figure 31</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Both
+build and deploy workflows generate our SPFx package. </span></p>
 
-<p class=MsoNormal>We also defined another provider which is <i>WebPartContextProvider</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Rather
+than copying and pasting from one workflow to another, we can make workflows
+reusable. Our build and deploy workflows call <i>shared</i> reusable</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>workflow.</span></p>
 
-<p class=MsoNormal><img border=0 width=1070 height=417 id="Picture 40"
-src="index_files/image032.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 32</p>
+<p class=MsoNormal><img border=0 width=1246 height=638 id="Picture 38"
+src="index_files/image032.jpg"></p>
 
-<p class=MsoNormal>Here we pass SharePoint Webpart Context as a value.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+32</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Reusable
+workflows are YAML-formatted files, very similar to any other workflow file. As
+with other workflow files, you locate reusable workflows</span></p>
 
-<p class=MsoNormal><img border=0 width=1095 height=478 id="Picture 41"
-src="index_files/image033.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>in
+the .github/workflows directory of a repository. For a workflow to be reusable,
+the values for <i>on </i>must include <i>workflow_call</i> We can define inputs</span></p>
 
-<p class=MsoNormal>Figure 33</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>and
+secrets, which can be passed from the caller workflow and then used within the
+called workflow. You see that we specified <i>should-test</i> input and we pass
+<i>true</i></span></p>
 
-<p class=MsoNormal>Context is passed from <i>ForumsHookWebPart.ts</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>from
+the <i>build</i> workflow and <i>false </i>from <i>deploy</i> one.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1093 height=556 id="Picture 42"
+<p class=MsoNormal><img border=0 width=626 height=814 id="Picture 40"
+src="index_files/image033.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+33</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+the reusable workflow we make Unit test conditional. If <i>should-test</i>
+passed has <i>true</i> value then <i>npm run test</i> will be called, otherwise
+will not. This means that when deploying the package (with false)</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>then
+we actually skip unit testing.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1268 height=816 id="Picture 41"
 src="index_files/image034.png"></p>
 
-<p class=MsoNormal>Figure 34</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+34</span></p>
 
-<p class=MsoNormal>This means we can use multiple providers which can be used
-globally. It is not required for them the be always uppermost ones. They can be
-nested at any level </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>That
+can be seen visually as well. When <i>build</i> workflow is running then Unit
+testing step is executed and we see the result.</span></p>
 
-<p class=MsoNormal>and effect on children embedded by them.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><img border=0 width=1018 height=640 id="Picture 42"
+src="index_files/image035.png"></p>
 
-<p class=MsoNormal><img border=0 width=984 height=330 id="Picture 43"
-src="index_files/image035.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+35</span></p>
 
-<p class=MsoNormal>Figure 35</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>When
+we build the package in <i>deploy </i>workflow you see we skipped unit testing.
+</span></p>
 
-<p class=MsoNormal>Instead of these 2 providers we could have just one provider
-<i>AppStateProvider </i>and also pass SharePoint Webpart context there. We use
-multiple </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>As
+we mentioned there are tons of actions distributed through a marketplace but sometimes,
+we need to create our own actions.</span></p>
 
-<p class=MsoNormal>contexts for values that are not usually consumed together.
-Consumer components that consume one value can re-render independently of those</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>that consume another value. In our app almost all components
-use reducers specified in <i>AppStateProvider</i> and only two components use
-WebPartContextProvider</p>
+<p class=MsoNormal><img border=0 width=921 height=341 id="Picture 43"
+src="index_files/image036.png"></p>
 
-<p class=MsoNormal>so, we defined multiple providers.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+36</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+can create three types of actions. The file name should be either action.yml or
+action.yaml. </span></p>
 
-<p class=MsoNormal><img border=0 width=1035 height=474 id="Picture 44"
-src="index_files/image036.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 36</p>
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%;
+color:black'>Docker</span></i><span style='font-size:14.0pt;line-height:107%;
+color:black'> containers allows you to use specific versions of an operating
+system, dependencies, tools, and code. For actions that must</span></p>
 
-<p class=MsoNormal>In reducers.ts file we globally shared reducers, we specify
-both <i>forums</i> and <i>topics</i> reducers. We specified three reducers in
-our app. <i>Forums</i> and <i>Topics </i>reducers (reducers.ts)</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>run
+in a specific environment configuration, Docker is an ideal option because you
+can customize the operating system and tools.</span></p>
 
-<p class=MsoNormal>are shared globally meaning they can be used throughout the
-app and <i>Posts</i> reducer (postReducer.ts, Figure 25) can only be used in
-posts related components.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Besides, Redact<span style='color:black'>'</span>s Built-in
-hooks we can also create our custom hooks. </p>
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%;
+color:black'>Javascript Actions</span></i><span style='font-size:14.0pt;
+line-height:107%;color:black'> can run directly on a runner machine, and
+separate the action code from the environment used to run the code.</span></p>
 
-<p class=MsoNormal>Custom hook allows you to extract some components logic into
-a reusable function. A custom hook is a JavaScript function that starts with <b><i>use
-</i></b>and that call can</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Using
+a Javascript action simplifies the action code. To ensure your Javascript
+actions are compatible with GitHub-hosted runners</span></p>
 
-<p class=MsoNormal>other hooks. Components and hooks are functions, so we are
-really not creating any new concepts here. We are just refactoring our code
-into another function</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>(Ubuntu,
+Windows, macOS) the packaged Javascript code you write should be pure
+Javascript and not reply on other binaries.</span></p>
 
-<p class=MsoNormal>to make it reusable.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>There is a convention that Hook functions should always be
-prefixed with <i>use, </i>followed by the Hook name starting with a capital
-letter; for example:</p>
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%;
+color:black'>Composite Action </span></i><span style='font-size:14.0pt;
+line-height:107%;color:black'>allow you to combine multiple workflows steps
+within one action. For example, you can use this feature to bundle</span></p>
 
-<p class=MsoNormal><i>useState</i>, <i>useEffect</i>, and <i>useReduce</i>.
-This is important, because otherwise we would not know which JavaScript
-functions are Hooks, and which are not.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>together
+multiple run commands into an action, and then have a workflow that executes
+the bundled commands as a single step</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>using
+that action.</span></p>
 
-<p class=MsoNormal><img border=0 width=927 height=363 id="Picture 45"
-src="index_files/image037.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 37</p>
+<p class=MsoNormal><img border=0 width=1177 height=574 id="Picture 44"
+src="index_files/image037.jpg"></p>
 
-<p class=MsoNormal>Here is a simple one. We created a custom hook that starts
-with <i>use</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+37</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+our project we use <i>Composite</i> custom action. We must use <i>using: </i></span><span
+style='color:black'>'</span></span><i><span style='font-size:14.0pt;line-height:
+107%;color:black'>composite</span></i><span style='color:black'>'</span></span><span
+style='font-size:14.0pt;line-height:107%;color:black'> This composite custom
+action is meant for getting dependencies and cache them.</span></p>
 
-<p class=MsoNormal><img border=0 width=1000 height=401 id="Picture 46"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>It
+has <i>inputs</i> parameter <i>caching</i> telling it whether cache
+dependencies or run <i>npm install </i>command each time this custom action is
+running. It also specifies <i>outputs </i>parameter</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>which
+says if it is cached or not. We are caching dependencies to speed up workflows.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1360 height=724 id="Picture 46"
 src="index_files/image038.png"></p>
 
-<p class=MsoNormal>Figure 38</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+38</span></p>
 
-<p class=MsoNormal>Obtaining the context from <i>WebPartContext</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>To
+cache dependencies for a job, we use <i>actions/cache</i> action. The action
+creates and restores a cache identified by a unique key. We create a new cache
+when packages</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>in
+<i>package-lock.json</i> file change, the cache key uses contexts and
+expressions to generate a key that includes the runner</span><span
+style='color:black'>'</span></span><span style='font-size:14.0pt;line-height:
+107%;color:black'>s operating system and SHA-256 hash of the</span></p>
 
-<p class=MsoNormal><img border=0 width=1032 height=510 id="Picture 47"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>package-lock.json
+file. So, when a new package added or updated, we run <i>npm install</i>
+command and install dependencies.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+can use the output of the <i>cache</i> action to do something based on whether
+a <i>cache hit</i> or miss occurred. When an exact match is found for a cache
+for the specified</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%;
+color:black'>key</span></i><span style='font-size:14.0pt;line-height:107%;
+color:black'>, the <i>cache-hit</i> output is set to <i>true</i>. In our custom
+action we install dependencies if <i>cache-hit</i> is false or we enforce
+dependency installation with <i>caching</i> inputs setting <i>false</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1410 height=403 id="Picture 47"
 src="index_files/image039.jpg"></p>
 
-<p class=MsoNormal>Figure 39</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+39</span></p>
 
-<p class=MsoNormal>Using the hook in some components.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>You
+can see Caches under <i>Actions</i> tab.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=789 height=483 id="Picture 122"
+<p class=MsoNormal><img border=0 width=1200 height=790 id="Picture 48"
 src="index_files/image040.png"></p>
 
-<p class=MsoNormal>Figure 40</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+40</span></p>
 
-<p class=MsoNormal>Here is another one. We get current user from the web. We
-will come to <i>useEffect</i> hook soon.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>When
+we run <i>build</i> workflow for the first time you see that there was no
+caching and <i>run nm ci</i> is called to install dependencies.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1058 height=654 id="Picture 123"
+<p class=MsoNormal><img border=0 width=1287 height=535 id="Picture 49"
 src="index_files/image041.jpg"></p>
 
-<p class=MsoNormal>Figure 41</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+41</span></p>
 
-<p class=MsoNormal>With the help of useCurrentUser hook we find out if current
-user is a site admin or not.</p>
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%;
+color:black'>Outputs</span></i><span style='font-size:14.0pt;line-height:107%;
+color:black'> from our custom action is <i>false</i>.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=907 height=379 id="Picture 50"
-src="index_files/image042.png"></p>
+<p class=MsoNormal><img border=0 width=1305 height=542 id="Picture 50"
+src="index_files/image042.jpg"></p>
 
-<p class=MsoNormal>Figure 42</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+42</span></p>
 
-<p class=MsoNormal>We get our globally shared dispatch function.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>When
+we run the workflow the second time then it reads form the cache, and <i>Cache
+used?</i> output is <i>true</i>. In this case the execution time is 17 seconds
+as compared to the first time (not cached)</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>when
+it was 39 seconds.</span></p>
 
-<p class=MsoNormal><img border=0 width=949 height=723 id="Picture 51"
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%;
+color:black'>Composite Actions</span></i><span style='font-size:14.0pt;
+line-height:107%;color:black'> looks very similar to <i>Reusable Workflows</i>
+but with reusable workflows you have a <i>very rich log </i>of what is
+happening, and every single job and step is logged</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>independently
+in real time.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1285 height=833 id="Picture 51"
 src="index_files/image043.png"></p>
 
-<p class=MsoNormal>Figure 43</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+43</span></p>
 
-<p class=MsoNormal>Used in the app.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>This
+is our reusable shared.yml workflow and you see what is happening, and every
+single job and step is logged independently in real time.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=829 height=445 id="Picture 52"
+<p class=MsoNormal><img border=0 width=1404 height=755 id="Picture 52"
 src="index_files/image044.png"></p>
 
-<p class=MsoNormal>Figure 44</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>It is the globally shared forums state.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+44</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>With
+composite actions, instead, all you have is a <i>single log</i> of a single
+step… even if it contains multiple steps. You see that there is no step info
+such as <i>Cache dependencies </i>and <i>Install dependencies</i>.</span></p>
 
-<p class=MsoNormal><img border=0 width=1044 height=751 id="Picture 53"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1310 height=628 id="Picture 53"
 src="index_files/image045.png"></p>
 
-<p class=MsoNormal>Figure 45</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+45</span></p>
 
-<p class=MsoNormal>We retrieve forums state from the hook.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+just see <i>npm ci</i> command running in Load &amp; cache dependencies <i>step</i>.</span></p>
 
-<p class=MsoNormal>The <i>useEffect</i> Hook accepts a function that contains
-code with side effects, such as timers and subscriptions. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=560 height=168 id="Picture 54"
+<p class=MsoNormal><img border=0 width=1090 height=741 id="Picture 54"
 src="index_files/image046.png"></p>
 
-<p class=MsoNormal>Figure 46</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+46</span></p>
 
-<p class=MsoNormal>The function passed to the Hook will run after the render is
-done and the component is on the screen.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+our build workflow, when we intentionally making the unit test failing, you see
+that the workflow breaks and stops. Sometimes, we need a workflow to be
+executed even if a job or step is failing. </span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=696 height=220 id="Picture 55"
+<p class=MsoNormal><img border=0 width=1080 height=694 id="Picture 55"
 src="index_files/image047.png"></p>
 
-<p class=MsoNormal>Figure 47</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+47</span></p>
 
-<p class=MsoNormal>A cleanup function can be returned from the Hook, which will
-be called when the component unmounts and is used to, for example,</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Here
+I created a workflow with 3 steps. On <i>test</i> step we ended it with <i>exit
+1</i>.</span></p>
 
-<p class=MsoNormal>clean up timers or subscriptions.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=542 height=190 id="Picture 56"
+<p class=MsoNormal><img border=0 width=1079 height=663 id="Picture 60"
 src="index_files/image048.png"></p>
 
-<p class=MsoNormal>Figure 48</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+48</span></p>
 
-<p class=MsoNormal>To avoid triggering the on every re-render, we can specify
-an array of values as the second argument to the Hook.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+see that it breaks and did not reach <i>report</i> step.</span></p>
 
-<p class=MsoNormal>Only when any of these values change, the effect will get
-triggered again. The array passed as the second argument is called the</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>dependency array of the effect. If you want the effect to
-only trigger during mounting, and cleanup function during unmounting, we can
-pass</p>
-
-<p class=MsoNormal>an empty array as the second argument.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=720 height=740 id="Picture 124"
+<p class=MsoNormal><img border=0 width=1015 height=743 id="Picture 57"
 src="index_files/image049.png"></p>
 
-<p class=MsoNormal>Figure 49</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+49</span></p>
 
-<p class=MsoNormal>In this <i>useEffect</i> Hook we can say, whenever anything
-in the array (the green rectangle) changes I want to go and run some code;
-something else needs to happen as well.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+modified the workflow by adding <i>continue-on-error: true </i>in <i>test</i>
+step which will prevent the workflow form failing when <i>test</i> step is
+failing.</span></p>
 
-<p class=MsoNormal>The word <i>Effect </i>comes from the word <i>side effect</i>.
-In our case whenever <i>newPosts </i>changes we set new posts count
-(setNewPostsCount).</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>There are lots of other things that your app needs to do
-besides just setting some value.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=614 height=212 id="Picture 59"
+<p class=MsoNormal><img border=0 width=949 height=576 id="Picture 58"
 src="index_files/image050.png"></p>
 
-<p class=MsoNormal>Figure 50</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+50</span></p>
 
-<p class=MsoNormal>For example, when a piece of data changes you need to do a
-fetch or you want to save some info to a local storage. You may want to play a
-sound or adjust the scroll position.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+this case though we are still getting the error, but <i>report</i> step
+executed.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=486 height=154 id="Picture 60"
+<p class=MsoNormal><img border=0 width=618 height=820 id="Picture 61"
 src="index_files/image051.png"></p>
 
-<p class=MsoNormal>Figure 51</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+51</span></p>
 
-<p class=MsoNormal>If you do not provide a dependency array React is just
-always going to run the side effect on every single render. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+or <i>deploy</i> workflow after generating a package we have to download it to
+deploy to an organization tenant. You remember we uploaded the package to
+storage space on </span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>GitHub
+(Figure 27) with <i>package </i>name. Now, we are downloading the artifact to
+install it on an organization app catalog.</span></p>
 
-<p class=MsoNormal><img border=0 width=576 height=173 id="Picture 61"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=581 height=811 id="Picture 62"
 src="index_files/image052.png"></p>
 
-<p class=MsoNormal>Figure 52</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+52</span></p>
 
-<p class=MsoNormal>What if we put an empty array? React is going to run the
-side effect on the very first render, just once.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+order to login to a tenant using CLI for Microsoft 365 we use <i>pnp/action-cli</i>
+third party action. To authenticate we should pass</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%;
+color:black'>admin username</span></i><span style='font-size:14.0pt;line-height:
+107%;color:black'> and <i>admin password. </i>In GitHub actions encrypted
+secrets allow you to store sensitive information in your organization,
+repository</span></p>
 
-<p class=MsoNormal><img border=0 width=872 height=432 id="Picture 125"
-src="index_files/image053.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>or
+repository environment. We will use that feature to encrypted our username and
+password.</span></p>
 
-<p class=MsoNormal>Figure 53</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>In our useCurrentUser.ts side effect we use an empty array, we
-run <i>useEffect</i> once to get current user.</p>
+<p class=MsoNormal><img border=0 width=1123 height=738 id="Picture 63"
+src="index_files/image053.jpg"></p>
 
-<p class=MsoNormal>Let<span style='color:black'>'</span>s see what <i>eslint-plugin-react-hooks
-plugin</i> does before going on with <i>useEffect</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+53</span></p>
 
-<p class=MsoNormal>You can install it via <i>npm install --save-dev
-eslint-plugin-react-hooks</i></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+should select <i>Settings </i>then click on <i>Actions </i>to add <i>New
+repository secret</i>. You see that I already set ADMIN_USERNAME and
+ADMIN_PASSWORD secrets.</span></p>
 
-<p class=MsoNormal><img border=0 width=961 height=659 id="Picture 63"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1253 height=689 id="Picture 64"
 src="index_files/image054.png"></p>
 
-<p class=MsoNormal>Figure 54</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+54</span></p>
 
-<p class=MsoNormal>It enforces these two rules.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>You
+set your secret and after saving it you will not be able to see the secret, but
+you can always re-set it.</span></p>
 
-<p class=MsoNormal>SharePoint SPFX does not support <i>eslint</i> yet, it
-supports <i>tslint</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=819 height=644 id="Picture 64"
+<p class=MsoNormal><img border=0 width=823 height=523 id="Picture 65"
 src="index_files/image055.png"></p>
 
-<p class=MsoNormal>Figure 55</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+55</span></p>
 
-<p class=MsoNormal>For that reason, I installed <i>tslint-react-hooks</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>I
+created a workflow to print both admin user name and password encrypted.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=651 height=640 id="Picture 65"
+<p class=MsoNormal><img border=0 width=937 height=599 id="Picture 66"
 src="index_files/image056.png"></p>
 
-<p class=MsoNormal>Figure 56</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+56</span></p>
 
-<p class=MsoNormal>I added up the rule to the project<span style='color:black'>'</span>s
-tslint.json.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>It
+Is not possible to see them as GitHub actions will not allow us to reveal it.
+It knows that they are coming from secrets and it writes characters *** instead
+of the actual secret value.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>When
+you run <i>deploy </i>workflow you may not be able login to your organization
+using <i>pnp/action-cli.</i> Because you may not have an access to PNP
+Management Shell.</span></p>
 
-<p class=MsoNormal><img border=0 width=738 height=578 id="Picture 66"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=856 height=193 id="Picture 67"
 src="index_files/image057.png"></p>
 
-<p class=MsoNormal>Figure 57</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+57</span></p>
 
-<p class=MsoNormal>If I put a hook inside the condition, I will get the warning
-<i>A hook cannot appear inside an if statement.</i></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>For
+that reason, an admin has to <i>Connect-PnPOnline </i>and run <i>Register-PnPManagementShellAccess</i>
+command.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>PnP
+Management Shell only uses delegated permission and is prepared with all the
+necessary scopes to utilize every cmdlet in PnP PowerShell.</span></p>
 
-<p class=MsoNormal><img border=0 width=871 height=686 id="Picture 67"
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Not
+all organizations are keen to consent to all of the scopes.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=568 height=765 id="Picture 68"
 src="index_files/image058.png"></p>
 
-<p class=MsoNormal>Figure 58</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+58</span></p>
 
-<p class=MsoNormal>There are some rules that you should be aware of when
-dealing with hooks and the plugin really helps us to avoid some errors.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Then
+you will be presented with a large dialog where you can consent. If you are an
+admin you can consent for your organization. </span></p>
 
-<p class=MsoNormal>Unfortunately. <i>tslint-react-hooks </i>plugin<i> </i>does
-not warn us against <i>exhaustive-deps </i>(Figure 54) that <i>eslint</i> does.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>We are going to see what<i> exhaustive-deps </i>mean.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=795 height=250 id="Picture 68"
+<p class=MsoNormal><img border=0 width=590 height=803 id="Picture 69"
 src="index_files/image059.png"></p>
 
-<p class=MsoNormal>Figure 59</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+59</span></p>
 
-<p class=MsoNormal>We already discussed this hook. Let<span style='color:black'>'</span>s
-change it.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>After
+<i>Login to tenant</i> step, we <i>Deploy app to tenant</i>. We use <i>pnp/action-cli-deploy
+</i>third party action to deploy our app using CLI for Microsoft 365. </span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=687 height=212 id="Picture 69"
+<p class=MsoNormal><img border=0 width=1119 height=696 id="Picture 70"
 src="index_files/image060.png"></p>
 
-<p class=MsoNormal>Figure 60</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+60</span></p>
 
-<p class=MsoNormal>Let<span style='color:black'>'</span>s pass an empty array this
-case. When you run it with <i>eslint</i> you will get a warning. <i>Eslint </i>see
-that you use <i>newPosts </i>inside the <i>useEffect </i>but it was not </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>We
+have two options either deploy app at tenant level or deploy app to a site
+collection. If you App Catalog is a site collection app catalog then you must
+use</span></p>
 
-<p class=MsoNormal>in the array. If you need that information (<i>newPosts</i>)
-and you do not have it in the array then it is not going to re-run the effect (am
-empty dependency array, just very first render)</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>option
+2 and if you it is a tenant app catalog you must use option 1. In our case it
+is option 1.</span></p>
 
-<p class=MsoNormal>when <i>newPosts</i> changes and the UI is going to be out
-of sync. <i>exhaustive-deps</i> warning is really helpful when you are dealing
-with <i>useEffect</i>. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>All variables subject to change that you use in your <i>useEffect
-</i>function should be included within the <i>useEffect </i>dependency array.</p>
+<p class=MsoNormal><img border=0 width=711 height=456 id="Picture 71"
+src="index_files/image061.png"></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+61</span></p>
 
-<p class=MsoNormal><img border=0 width=965 height=468 id="Picture 126"
-src="index_files/image061.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>When
+we deploy a package manually, we can select “Make this solution available to
+all sites in the organization” option.</span></p>
 
-<p class=MsoNormal>Figure 61</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>By the way, you can have several <i>useEffect</i> and the
-order matters. They will be executed in the same order as they are defined
-inside the component.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=904 height=264 id="Picture 71"
+<p class=MsoNormal><img border=0 width=646 height=155 id="Picture 72"
 src="index_files/image062.png"></p>
 
-<p class=MsoNormal>Figure 62</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+62</span></p>
 
-<p class=MsoNormal>You should also include functions when using inside <i>useEffect</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+this case <i>Added to all sites </i>is <i>Yes</i>.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=921 height=563 id="Picture 72"
+<p class=MsoNormal><img border=0 width=1193 height=93 id="Picture 73"
 src="index_files/image063.png"></p>
 
-<p class=MsoNormal>Figure 63</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+63</span></p>
 
-<p class=MsoNormal>The <i>dispatch</i> function is stable and will not change
-on re-renders, so it is safe to omit it from <i>useEffect</i> or the&nbsp;<i>useCallback</i>
-dependencies.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>When
+we deploy it via GitHub actions then the value is <i>No</i>.</span></p>
 
-<p class=MsoNormal>When you define <i>dispatch</i> globally <i>eslint</i>
-complains about it so we added it to the array.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=803 height=401 id="Picture 127"
+<p class=MsoNormal><img border=0 width=581 height=665 id="Picture 74"
 src="index_files/image064.png"></p>
 
-<p class=MsoNormal>Figure 64</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+64</span></p>
 
-<p class=MsoNormal>You see that in <i>useEffect </i>we used <i>setUser </i>function
-from React <i>useState </i>built-in hook but did not define it in dependency
-array.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>You do not need to include the setter function <i>setState </i>in
-your dependency array because React guarantees that it will not change.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>In
+this case we have to add it to the site manually.</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=825 height=396 id="Picture 128"
+<p class=MsoNormal><img border=0 width=1353 height=456 id="Picture 75"
 src="index_files/image065.png"></p>
 
-<p class=MsoNormal>Figure 65</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Figure
+65</span></p>
 
-<p class=MsoNormal>Note, that you cannot call <i>useEffect </i>with <i>async</i>
-as your <i>side effect</i> should always be synchronous. You should either use <i>Immediately
-Invoked Function Expression</i> like </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>Our
+SPFx Forums Hook Web part running.</span></p>
 
-<p class=MsoNormal>we did or define a function with async inside <i>useEffect</i>
-and call that function from <i>useEffect</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=780 height=555 id="Picture 75"
-src="index_files/image066.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 66</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Suppose, we have <i>Posts </i>React class component where a
-user can subscribe to posts in <i>componentDidMount() </i>and unsubscribe form
-posts and subscribe</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>in <i>componentDidUpdate() </i>when <i>uid</i> prop is
-changed and unsubscribe in <i>componentWillUnmount().</i></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=774 height=559 id="Picture 76"
-src="index_files/image067.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 67</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>We can do the same thing with use <i>useEffect</i>. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>We already stated: A cleanup function can be returned from
-the Hook, which will be called when the component unmounts and is used to, for
-example,</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>clean up timers or subscriptions. In our case in <i>return unsub,
-</i>we unsubscribe from posts.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=757 height=669 id="Picture 77"
-src="index_files/image068.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 68</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>We can replace <i>useEffect</i> code just with a single line
-of code. Our one-line <i>useEffect </i>is doing the exact same thing as <i>Posts</i>
-React class component.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'> </span></p>
 
-<p class=MsoNormal>With Hooks you have 90% cleaner code.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=798 height=278 id="Picture 78"
-src="index_files/image069.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 69</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>When you run <i>Forums Hooks</i> web part for the first time
-it generates three SharePoint lists.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=681 height=175 id="Picture 79"
-src="index_files/image070.png"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 70</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>They are FH_<i>Forums</i>, FH_<i>Topics</i> and FH_<i>Posts</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1110 height=563 id="Picture 129"
-src="index_files/image071.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 71</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><i>ForumsView</i> function will be invoked as soon as the
-web part is loaded. which is specified in our router (Figure 11). You can see
-that we specified our custom <i>useListService</i> hook</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>which is basically doing CRUD operation on a SharePoint list.
-In this component we are getting forums from <i>FH_Forums</i> list. We get
-forums, also an error if it occurs and loading</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>telling us if our async data retrieval is in progress or
-not. </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1074 height=513 id="Picture 82"
-src="index_files/image072.jpg"></p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>Figure 72</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>We pass title param to the service, which is the list title
-such as <i>FH_Forums </i>and <i>cached </i>param. If <i>cached</i> is true<i> </i>then
-we obtain the cached version of data by not sending a </p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>request to the server. We also specify 3 <i>useStates</i>
-hooks for <i>data</i>, <i>error</i> and <i>loading</i>.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;color:black'>&nbsp;</span></p>
 
-<p class=MsoNormal><img border=0 width=1046 height=516 id="Picture 83"
-src="index_files/image073.jpg"></p>
-
-<p class=MsoNormal>Figure 73</p>
-
-<p class=MsoNormal>uselistsService custom hook returns <i>data</i>, <i>loading</i>
-and error <i>props</i> and some functions which can be called from our
-components.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1058 height=217 id="Picture 130"
-src="index_files/image074.jpg"></p>
-
-<p class=MsoNormal>Figure 74</p>
-
-<p class=MsoNormal>Once we defined our service, we call <i>getListItems </i>to
-retrieve forums from the list.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1065 height=528 id="Picture 85"
-src="index_files/image075.jpg"></p>
-
-<p class=MsoNormal>Figure 75</p>
-
-<p class=MsoNormal>In <i>getListItems </i>we either retrieve forums from the
-list or from the cache depending on <i>cache</i> value (Figure 72).</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1083 height=399 id="Picture 86"
-src="index_files/image076.png"></p>
-
-<p class=MsoNormal>Figure 76</p>
-
-<p class=MsoNormal>We make use of <i>useCallback</i> React built-in hook.</p>
-
-<p class=MsoNormal>Let<span style='color:black'>'</span>s remove <i>useCallback
-</i>to see what this hook is used for.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=981 height=352 id="Picture 87"
-src="index_files/image077.png"></p>
-
-<p class=MsoNormal>Figure 77</p>
-
-<p class=MsoNormal>In ForumsView we call getListItems.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=828 height=278 id="Picture 88"
-src="index_files/image078.png"></p>
-
-<p class=MsoNormal>Figure 78</p>
-
-<p class=MsoNormal>getListItems hits and data are retrieved from the list.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=693 height=373 id="Picture 89"
-src="index_files/image079.png"></p>
-
-<p class=MsoNormal>Figure 79</p>
-
-<p class=MsoNormal>Returning data from the useListsService.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=808 height=363 id="Picture 90"
-src="index_files/image080.png"></p>
-
-<p class=MsoNormal>Figure 80</p>
-
-<p class=MsoNormal>ForumsView function is recreated, getListItems is called
-again and we are in an endless loop. With <i>useCallback</i> we pass an array
-of dependencies </p>
-
-<p class=MsoNormal>which is in our case is [cahed] (Figure 76) and return a
-memorized version of the callback function. So, ForumsView will get the
-memorized version </p>
-
-<p class=MsoNormal>of getListItems unless <i>cached </i>dependency is changes (e.g.,
-from <i>false</i> to <i>true</i>). In our case <i>cached</i> is not changing
-when loading forums</p>
-
-<p class=MsoNormal>and getListItems is memorized.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1039 height=481 id="Picture 131"
-src="index_files/image081.png"></p>
-
-<p class=MsoNormal>Figure 81</p>
-
-<p class=MsoNormal>In ForumsView component as we already discussed, we could
-get forums and add it to forums reducer.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1022 height=542 id="Picture 92"
-src="index_files/image082.png"></p>
-
-<p class=MsoNormal>Figure 82</p>
-
-<p class=MsoNormal>On the same control we have <i>Forums </i>child component to
-render forums but in that component but we do not pass forums data.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1049 height=519 id="Picture 93"
-src="index_files/image083.png"></p>
-
-<p class=MsoNormal>Figure 83</p>
-
-<p class=MsoNormal>In <i>Forums</i> component we can get forums data via <i>useForumsState</i>
-custom hook (Figure 44) as we have a globally shared reducer.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1060 height=498 id="Picture 94"
-src="index_files/image084.jpg"></p>
-
-<p class=MsoNormal>Figure 84</p>
-
-<p class=MsoNormal>This is not the case with <i>PostsView</i> as <i>posts</i>
-reducer is not globally shared and we have to pass the <i>state</i> to <i>Posts</i>
-child component to render it.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1079 height=531 id="Picture 95"
-src="index_files/image085.png"></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal>Figure 85</p>
-
-<p class=MsoNormal>When we are on topics page, we render the forum name on the
-navigation which is in our case is <i>Office 365</i>.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1076 height=473 id="Picture 134"
-src="index_files/image086.png"></p>
-
-<p class=MsoNormal>Figure 86</p>
-
-<p class=MsoNormal>One of the ways to get the forum name is via globally shared
-reducer. We have forums loaded in forums reducer and have <i>forumId</i> coming
-from URL (<i>fid</i>). We can find the forum</p>
-
-<p class=MsoNormal>and get the forum name. The problem is that when the user
-refreshes the browser while he is on topics page then all forums data from forums
-reducer are gone. That is the case</p>
-
-<p class=MsoNormal>that we retrieve the forum information via our <i>useListsService
-</i>custom hook<span style='color:black'>'</span>s <i>getListItem</i> function.
-Note, we can have many instances of <i>useListsService</i> hook.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=989 height=279 id="Picture 99"
-src="index_files/image087.png"></p>
-
-<p class=MsoNormal>Figure 87</p>
-
-<p class=MsoNormal>When you navigate from <i>forums</i> page to <i>topics</i>
-page you will see waiting loading indicator and after that topics are loaded.</p>
-
-<p class=MsoNormal>When you go from <i>topics</i> page back to <i>forums</i>
-page via navigation, by clicking <i>Forums</i> link we do not want to retrieve
-forums from the server but from <i>useListsService </i>cache.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=872 height=673 id="Picture 100"
-src="index_files/image088.png"></p>
-
-<p class=MsoNormal>Figure 88</p>
-
-<p class=MsoNormal><i>Link </i>from <i>react-router-dom </i>allows us to
-specify <i>state</i> property. When you click a navigation coming from topics
-page back to forums page <i>state </i>property is there.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=975 height=436 id="Picture 110"
-src="index_files/image089.jpg"></p>
-
-<p class=MsoNormal>Figure 89</p>
-
-<p class=MsoNormal>We obtain <i>state</i> parameter and pass it down to our <i>customListsService</i>
-as a second parameter.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=974 height=525 id="Picture 107"
-src="index_files/image090.jpg"></p>
-
-<p class=MsoNormal>Figure 90</p>
-
-<p class=MsoNormal>useListService <i>cached</i> argument is true in this case
-(navigation <i>state</i> is true) and the forums are loaded from cache. Forums
-are in the cache because we navigated </p>
-
-<p class=MsoNormal>to topics page from forums page and forums were already
-loaded and are in the cache.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=791 height=658 id="Picture 108"
-src="index_files/image091.png"></p>
-
-<p class=MsoNormal>Figure 91</p>
-
-<p class=MsoNormal>What if a user navigates from forums page to topics, refreshes
-the browser while he is on topics page then clicks <i>Forums</i> link on the
-navigation and comes to forums page?</p>
-
-<p class=MsoNormal>In this case though <i>cached</i> value is <i>true</i> as we
-navigated from topics page to forums page but the <i>cache</i> object is empty
-as we refreshed the page. </p>
-
-<p class=MsoNormal>This time forums will be loaded from the server despite the
-fact that cached value is <i>true</i> and you will see Wait loading indicator
-as data are retrieved from the server.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1038 height=431 id="Picture 111"
-src="index_files/image092.jpg"></p>
-
-<p class=MsoNormal>Figure 92</p>
-
-<p class=MsoNormal>You can add, update or delete a forum topic or a post using
-forms.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1093 height=446 id="Picture 112"
-src="index_files/image093.jpg"></p>
-
-<p class=MsoNormal>Figure 93</p>
-
-<p class=MsoNormal>In TopicsForm component where topic<span style='color:black'>'</span>s
-form controls are declared we pass formState object.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1055 height=560 id="Picture 113"
-src="index_files/image094.png"></p>
-
-<p class=MsoNormal>Figure 94</p>
-
-<p class=MsoNormal>These are topics controls.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1085 height=398 id="Picture 114"
-src="index_files/image095.png"></p>
-
-<p class=MsoNormal>Figure 95</p>
-
-<p class=MsoNormal>In TopicsView component we pass data to our useFormData hook
-then to useFormState hook. </p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=849 height=512 id="Picture 115"
-src="index_files/image096.png"></p>
-
-<p class=MsoNormal>Figure 96</p>
-
-<p class=MsoNormal>When the topic panel is closed (this custom hook is also
-used in forums and topics components) we set data and return it.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1000 height=446 id="Picture 116"
-src="index_files/image097.jpg"></p>
-
-<p class=MsoNormal>Figure 97</p>
-
-<p class=MsoNormal>This is the shared form state which we us in our components.
-For text field and text area controls we call <i>handleChange</i> function, for
-checkboxes <i>handleChecked</i> and we can also</p>
-
-<p class=MsoNormal>call <i>handleCustom</i> by passing key and value pair
-(Figure 94).</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1026 height=329 id="Picture 117"
-src="index_files/image098.jpg"></p>
-
-<p class=MsoNormal>Figure 98</p>
-
-<p class=MsoNormal>You can <i>undo</i> or <i>redo</i> a post content.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1009 height=524 id="Picture 118"
-src="index_files/image099.jpg"></p>
-
-<p class=MsoNormal>Figure 99</p>
-
-<p class=MsoNormal>For the we use our custom useDebouncedUndo hook which makes
-use of two third-party hooks; <i>use-undo</i> and <i>use-debounce</i>.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=869 height=566 id="Picture 119"
-src="index_files/image100.png"></p>
-
-<p class=MsoNormal>Figure 100</p>
-
-<p class=MsoNormal>You can read about <i>use-undo-hook </i>hook in this URL.</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img border=0 width=1009 height=618 id="Picture 120"
-src="index_files/image101.png"></p>
-
-<p class=MsoNormal>Figure 101</p>
-
-<p class=MsoNormal>This is the URL of <i>use-debounce</i> hook.</p>
-
-<p class=MsoNormal>With the help of these two hooks, we implemented debounced
-undo/redo.</p>
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
 
 </div>
 
