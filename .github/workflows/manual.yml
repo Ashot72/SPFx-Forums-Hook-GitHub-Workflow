@@ -1,19 +1,15 @@
-name: Continue On Error
+name: Revealing secrets
 on:
   workflow_dispatch:   
 jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-    - name: build
-      run: echo "build"
-    - name: test
-      continue-on-error: true
+    - name: print username and password
       run: |
-        echo "test"
-        exit 1
-    - name: report
-      run: echo "report"
+       echo ${{ secrets.ADMIN_USERNAME }}
+       echo ${{ secrets.ADMIN_PASSWORD }}
+   
     
   
    
