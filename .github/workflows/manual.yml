@@ -1,12 +1,18 @@
-name: Output Information
+name: Continue On Error
 on:
   workflow_dispatch:   
 jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-    - name: Output GitHub context
-      run: echo "${{ toJSON(github) }}"
+    - name: build
+      run: echo "build"
+    - name: test
+      run: |
+        echo "test"
+        exit 1
+    - name: report
+      run: echo "report"
     
   
    
