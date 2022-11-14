@@ -1,5 +1,5 @@
 # SPFx Forums Hook GitHub Workflow
-I built a CI/CD pipeline with GitHub Actions (Workflows) for my SharePoint SPFx-Forums-Hook application. We will test, build, generate an SPFx package and deploy it to an organization tenant’s App Catalog automatically. Our workflow uses third tarty actions, reusable workflows and composite actions.
+I built a CI/CD pipeline with GitHub Actions (Workflows) for my SharePoint SPFx-Forums-Hook application. We will test, build, generate an SPFx package and deploy it to an organization tenant’s App Catalog automatically. Our workflow uses third party actions, reusable workflows and composite actions.
 
 
 Original [SharePoint SPFx-Forums-Hook application](https://github.com/Ashot72/SPFx-Forums-Hook).
